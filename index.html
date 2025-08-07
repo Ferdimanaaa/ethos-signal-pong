@@ -73,16 +73,19 @@
   drawRect(0, playerY, paddleWidth, paddleHeight, '#2575fc');
   drawRect(canvas.width - paddleWidth, aiY, paddleWidth, paddleHeight, '#6a11cb');
 
+  // Ukuran bola (logo)
+  const logoSize = 36; // perbesar dari 24 ke 36 px
+
   // Gambar logo EthOS sebagai bola
-  ctx.drawImage(ethosLogo, ballX - 12, ballY - 12, 24, 24);
+  ctx.drawImage(ethosLogo, ballX - logoSize / 2, ballY - logoSize / 2, logoSize, logoSize);
 
   // Tambahkan teks 'wen code' di atas bola
-  ctx.fillStyle = '#000'; // warna teks, bisa diganti sesuai background
-  ctx.font = '10px Courier New';
+  ctx.fillStyle = '#000'; // warna teks
+  ctx.font = '16px Courier New'; // sedikit lebih besar
   ctx.textAlign = 'center';
-  ctx.fillText('wen code', ballX, ballY - 18); // posisi teks di atas bola
+  ctx.fillText('wen code', ballX, ballY - logoSize / 2 - 6); // posisi di atas logo
 }
-  
+    
     function update() {
       ballX += ballSpeedX;
       ballY += ballSpeedY;
