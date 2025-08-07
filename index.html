@@ -69,12 +69,10 @@
     }
 
     function draw() {
-  drawRect(0, 0, canvas.width, canvas.height, '#e0e0e0'); // Background canvas jadi abu-abu
-  drawNet();
-  drawRect(0, playerY, paddleWidth, paddleHeight, '#2575fc');
-  drawRect(canvas.width - paddleWidth, aiY, paddleWidth, paddleHeight, '#6a11cb');
-  ctx.drawImage(ethosLogo, ballX - 12, ballY - 12, 24, 24);
-}
+      drawRect(0, 0, canvas.width, canvas.height, '#fff');
+      drawNet();
+      drawRect(0, playerY, paddleWidth, paddleHeight, '#2575fc');
+      drawRect(canvas.width - paddleWidth, aiY, paddleWidth, paddleHeight, '#6a11cb');
 
       // Gambar logo EthOS sebagai bola
       ctx.drawImage(ethosLogo, ballX - 12, ballY - 12, 24, 24);
@@ -118,7 +116,7 @@
     }
 
     function updateScoreboard() {
-      scoreboard.textContent = `Player: ${playerScore} | AI: ${aiScore}`;
+      scoreboard.textContent = Player: ${playerScore} | AI: ${aiScore};
     }
 
     function resetBall() {
